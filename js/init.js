@@ -2,6 +2,7 @@ const CATEGORIES_URL = "https://japdevdep.github.io/ecommerce-api/category/all.j
 const PUBLISH_PRODUCT_URL = "https://japdevdep.github.io/ecommerce-api/product/publish.json";
 const CATEGORY_INFO_URL = "https://japdevdep.github.io/ecommerce-api/category/1234.json";
 const PRODUCTS_URL = "https://japdevdep.github.io/ecommerce-api/product/all.json";
+
 const PRODUCT_INFO_URL = "https://japdevdep.github.io/ecommerce-api/product/5678.json";
 const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/product/5678-comments.json";
 const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
@@ -40,8 +41,15 @@ var getJSONData = function(url){
     });
 }
 
+
+
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
+
+  var userEmail = localStorage.getItem("login");
+  var userElement = document.getElementsByClassName("username")[0];
+  userElement.innerText = userEmail;
+  console.log(userElement);
 });

@@ -22,7 +22,15 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle username" type="label" id="username" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style= "color:greenyellow;">
+       </button>
+      <div class="dropdown-menu" aria-labelledby="username">
+        <a class="dropdown-item" href="cart.html">Mi carrito</a>
+        <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+        <a class="dropdown-item" href="login.html"  onclick="cerrarSession()">Cerrar sesión</a>
+      </div>
+    </div>
     </div>
   </nav>
   <main role="main">
@@ -81,6 +89,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/category-info.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>
