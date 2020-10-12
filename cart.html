@@ -1,78 +1,117 @@
 <!DOCTYPE html>
 <!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
-<html lang="en">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>eMercado - Todo lo que busques está aquí</title>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="Prueba.css" rel="stylesheet">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <title>eMercado - Todo lo que busques está aquí</title>
-
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
-    }
-  </style>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <link href="css/dropzone.css" rel="stylesheet">
-</head>
 
-<body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle username" type="label" id="username" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style= "color:greenyellow;">
-       </button>
-      <div class="dropdown-menu" aria-labelledby="username">
-        <a class="dropdown-item" href="cart.html">Mi carrito</a>
-        <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
-        <a class="dropdown-item" href="login.html"  onclick="cerrarSession()">Cerrar sesión</a>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/dropzone.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="site-header sticky-top py-1 bg-dark">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+            <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+            <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+            <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle username" type="label" id="username" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style= "color:greenyellow;">
+             </button>
+            <div class="dropdown-menu" aria-labelledby="username">
+              <a class="dropdown-item" href="cart.html">Mi carrito</a>
+              <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+              <a class="dropdown-item" href="login.html" onclick="cerrarSession()">Cerrar sesión</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+      <div class="container">
+        <div class="text-center p-4">
+          <h2>Tu Carro de Compras</h2>
+          <p class="lead">Aqui veras toda la información necesaria para la compra</p>
+        </div>
       </div>
-    </div>
-    </div>
-  </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
+  <div>
+    <h4 class="text-center p-4"> Información de la Compra </h4>
   </div>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/dropzone.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/login.js"></script>
-</body>
+  
+       
+          <div class="col-md-8 order-md-1" id="cartProducts">
 
+          </div>
+          
+          <div class="list-group-item list-group-item-action">
+            <div>
+              <label for="state">Moneda</label>
+              <select class="custom-select d-block w-100" id="productCurrency" required="">
+                <option selected>Pesos Uruguayos (UYU)</option>
+                <option>Dólares (USD)</option>
+              </select>
+            </div>
+            <h3 class="mb-1">Envio: </h3>
+
+          <div class="custom-control custom-radio">
+          <input id="goldradio" name="publicationType" type="radio" class="custom-control-input" checked="" required="">
+          <label class="custom-control-label" for="goldradio">Express(UYU 150)</label>
+          </div>
+          
+          <div class="custom-control custom-radio">
+          <input id="standardradio" name="publicationType" type="radio" class="custom-control-input" required="">
+          <label class="custom-control-label" for="standardradio">Normal(UYU 100)</label>
+          </div>
+          
+          <div>
+            <p></p>
+            <h3 class="mb-1">Total: $<span id="totalTotal"></span> </h3>
+            <p></p>
+            <button class="btn btn-success" type="submit">Proceder al Pago</button>
+            <p></p>
+            <a href="index.html" class="btn btn-success">Seguir comprando</a>
+            <span id="subtotalGeneral"></span>
+            
+          </div>
+          </div>
+          
+          
+        </div>
+       
+      <footer class="text-muted">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+         
+            <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+            <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+        </div>
+      </footer>
+      <div id="spinner-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/dropzone.js"></script>
+      <script src="js/init.js"></script>
+      <script src="js/sell.js"></script>
+      <script src="js/login.js"></script>
+      <script src="js/cart.js"></script>
+    </body>
 </html>

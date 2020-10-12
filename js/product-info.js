@@ -23,6 +23,33 @@ function showImagesGallery(array){
     }
 }
 
+function mostrarComentarios() {
+
+    let htmlContentToAppend = "";
+
+    for (let i = 0; i < comentarios.length; i++){
+        let comment = comentarios[i];
+
+        htmlContentToAppend += `
+        <div class="row">
+            <div class="col>"
+                <div style="margin-bottom: 20px;">
+                    <div class="d-flex w-100 justify-content-between">  
+                        <h5 class="mb-1">${ comment.user } </h5>
+                        <small class="text-muted"> ${ comment.score } Puntuacion</small>
+                    </div>
+                    <div class="d-flex w-100 justify-content-between">
+                            <small class="text-muted"> ${ comment.dateTime } </small>
+                        </div>
+                            <p class="mb-1"> ${ comment.description } </p>
+                        </div>
+                    </div>
+                </div>
+            `
+            document.getElementById("comentarios").innerHTML = htmlContentToAppend;
+    }
+}
+
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
@@ -62,7 +89,17 @@ document.addEventListener("DOMContentLoaded", function(e){
         
 
     });
-    
+    getJSONData( PRODUCT_INFO_COMMENTS_URL).then(function(resultObj){
+        if (resultObj.status === "ok"){
+            related= resultObj.data;
+
+            mostrarComentarios()
+
+        
+        }
+        
+
+    });
 
             });
             

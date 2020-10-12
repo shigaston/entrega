@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>eMercado - Todo lo que busques está aquí</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="Prueba.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/dropzone.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="site-header sticky-top py-1 bg-dark">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+            <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+            <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+            <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle username" type="label" id="username" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style= "color:greenyellow;">
+             </button>
+            <div class="dropdown-menu" aria-labelledby="username">
+              <a class="dropdown-item" href="cart.html">Mi carrito</a>
+              <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+              <a class="dropdown-item" href="login.html" onclick="cerrarSession()">Cerrar sesión</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+      <div class="container">
+        <div class="text-center p-4">
+          <h2>Tu Carro de Compras</h2>
+          <p class="lead">Aqui veras toda la información necesaria para la compra</p>
+        </div>
+      </div>
+  <div>
+    <h4 class="text-center p-4"> Informacion de la Compra</h4>
+  </div>
+
+        </div>
+        <div class="cart_section">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-lg-10 offset-lg-1">
+                      <div class="cart_container">
+                          <div class="cart_title"><small> 1 Item en su Carrito</small></div>
+                          <div class="cart_items">
+                              <ul class="cart_list">
+                                  <li class="cart_item clearfix">
+                                      <div class="cart_item_image"></div>
+                                      <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                                        <div class="cart_item_name cart_info_col">
+                                          <div class="cart_item_title">Modelo</div>
+                                          <div class="cart_item_image" id="cartSrc"></div>
+                                      </div>
+                                        <div class="cart_item_name cart_info_col">
+                                              <div class="cart_item_title">Nombre</div>
+                                              <div class="cart_item_text" id="cartName"></div>
+                                          </div>
+                                          <div class="cart_item_color cart_info_col">
+                                              <div class="cart_item_title">Cantidad</div>
+                                              <div class="cart_item_text" id="cartCount"></div>                         
+                                            </div>
+                                          <div class="cart_item_quantity cart_info_col">
+                                              <div class="cart_item_title">Moneda</div>
+                                              <select class="custom-select d-block w-100" id="">
+                                              <option selected>Pesos Uruguayos (UYU)</option>
+                                              <option>Dólares (USD)</option>
+                                              </select>
+                                          </div>
+                                          <div class="cart_item_price cart_info_col">
+                                              <div class="cart_item_title">Precio</div>
+                                              <div class="cart_item_text" id="cartUnitCost"></div>
+                                          </div>
+                                          <div class="cart_item_total cart_info_col">
+                                              <div class="cart_item_title">Total</div>
+                                              <div class="cart_item_text"></div>
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </div>
+                          <div class="order_total">
+                              <div class="order_total_content text-md-right">
+                                  <div class="order_total_title">Total:</div>
+                                  <div class="order_total_amount"></div>
+                                  <hr>
+                                  <a href="index.html" class="btn btn-success">Proceder al Pago</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <footer class="text-muted">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+          <a href="index.html" class="btn btn-success">Seguir comprando</a>
+            <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+            <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+        </div>
+      </footer>
+      <div id="spinner-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/dropzone.js"></script>
+      <script src="js/init.js"></script>
+      <script src="js/sell.js"></script>
+      <script src="js/login.js"></script>
+      <script src="js/cart.js"></script>
+    </body>
+</html>
