@@ -17,6 +17,9 @@
     subTotal();
   });
  }
+ document.getElementById(`premiumradio`).addEventListener("change", function(){
+    subTotal();
+  });
  
 
  document.addEventListener("DOMContentLoaded", function(e){
@@ -63,16 +66,22 @@
         
         <div class="list-group-item list-group-item-action">
         <div class="row" ">
+        <div> 
+        <button type="button" class="btn btn-outline-danger btn-xs" onclick="eliminar(${index});" alt="Eliminar" >
+        X
+</button>
+</div>
             <div class="col-3">
-                <img src="${item.src}" alt="${item.name}" class="img-thumbnail">
+                <img src="${item.src}" alt="${item.name}" class="img-thumbnail" style="width: 150px; height: 150px;">
             </div>
+            
             <div class="col">
                 <div class="d-flex w-100 justify-content-between">
                 <a href="product-info.html" class="list-item-action"><h4 class="mb-1">${item.name}</h4></a>
                     <div>
                     <p class="mb-1">Precio: <span id="currency${index}">${item.currency}</span> <span id="unitCost${index}">${item.unitCost}</span></p>
                     
-                    <p class="mb-1">Unidades: <input type="number" class="form-control count" id="articleCount${index}"${item.count} value="2" min="0"> </p>
+                    <p class="mb-1">Unidades: <input type="number" class="form-control count" id="articleCount${index}"${item.count} value="1" min="0"> </p>
                    
                    
 <p>                                            </p>
@@ -94,11 +103,11 @@
 `
                     
                     
-                    document.getElementById("cartProducts").innerHTML = htmlContentToAppend;
+                    
     
     
 }
-  
+document.getElementById("cartProducts").innerHTML = htmlContentToAppend;
  }
  function subTotal(){
      let subtotal = 0;
@@ -111,6 +120,8 @@
          subtotal = unitCost * count; 
          document.getElementById(`subTotal${i}`).innerHTML= subtotal;
          total += subtotal;
+
+        
      }
      //if(document.getElementById(`dolares`).selected.value){
         //document.getElementById(`subTotal${index}`).innerHTML= subtotal / 40;
@@ -119,12 +130,26 @@
     //}
 
      //document.getElementById(`subtotalGeneral`).innerHTML= total;
-     console.log(document.getElementById("goldradio").checked)
+     
+     
      if (document.getElementById("goldradio").checked){
-        document.getElementById(`totalTotal`).innerHTML= total + 150 ;
-     }
-     else { document.getElementById(`totalTotal`).innerHTML= total + 100 ;
+        document.getElementById(`totalTotal`).innerHTML= (total + (subtotal / 100) * 7);
+     }else{ 
+         if (document.getElementById("standardradio").checked){
+            document.getElementById(`totalTotal`).innerHTML= (total + (subtotal / 100) * 5);
+         }else{
+             if (document.getElementById("premiumradio").checked){
+                document.getElementById(`totalTotal`).innerHTML= (total + (subtotal / 100) * 15);
+         }
+    
     }
+}
 
- }
- 
+};
+
+function eliminar(i){
+    items.splice(i, 1);
+    showCartProducts(items);
+}
+
+

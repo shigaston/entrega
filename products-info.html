@@ -36,107 +36,17 @@
     </div>
     </div>
   </nav>
-  <main role="main">
-    <div class="container mt-5">
-      <div class="text-center p-4">
-
-        <h2>Descripción del Producto</h2>
-
-        <p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
-
-        <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea la categoría
-          seleccionada previamente, siempre se visualizará la presente: <strong>Autos</strong>.</p>
-      </div>
-
-      <h3 id="productName"></h3>
-      <hr class="my-3">
-      <dl>
-        <dt>Descripción</dt>
-        <dd>
-          <p id="productDescription"></p>
-        </dd>
-        <dt>Categoría</dt>
-        <dd>
-          <p id="productcategory"></p>
-        </dd>
-        <dt>Cantidad de productos disponibles en la categoría</dt>
-        <dd>
-          <p id="productsoldCount"></p>
-        </dd>
-        <dt>Moneda</dt>
-        <dd>
-          <p id="productcurrency"></p>
-        </dd>
-        <dt>Llevalo a tan solo</dt>
-        <dd>
-           <p id="productcost"> </p> 
-        </dd>
-
-        <dt>Imágenes ilustrativas</dt>
-        <dd>
-          <p id="relatedproducts"> </p> 
-           <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img src="img/prod1.jpg"class="col-lg-3 col-md-4 col-6" alt="..." href="products-info.html">
-              </div>
-              <div class="carousel-item">
-                <img src="img/prod1_1.jpg" class="col-lg-3 col-md-4 col-6" alt="..." href="products-info.html">
-              </div>
-              <div class="carousel-item">
-                <img src="img/prod1_2.jpg" class="col-lg-3 col-md-4 col-6" alt="..." href="products-info.html">
-              </div>
-              <div class="carousel-item">
-                <img src="img/prod1_3.jpg" class="col-lg-3 col-md-4 col-6" alt="..." href="products-info.html">
-              </div>
-              <div class="carousel-item">
-                <img src="img/prod1_4.jpg" class="col-lg-3 col-md-4 col-6" alt="..." href="products-info.html">
-              </div>
-            </div>
-          </div>
-          </div>
-        </dd>
-      </dl>
-      <h3>Productos relacionados</h3>
-        <dd>
-           <p id="relatedproducts"> </p> 
-           <a title=" Producto1" href="products-info.html"><img src="img/prod4.jpg" alt="Onix" height="170px" style="margin-left: 100px"/></a>
-           <a title=" Producto2" href="products-info.html"><img src="img/prod2.jpg" alt="fiat" height="170px" style="margin-left: 100px"/></a>
-           <a title=" Producto3" href="products-info.html"><img src="img/car3.jpg" alt="peugeot" height="170px" style="margin-left: 100px"/></a>
-
-
-        </dd>
-        
-      <h3>Comentarios de clientes</h3>
-      <p onemptied="mostrarComentarios()" id="comentarios"></p>
-      <hr class="my-3">
-      <dl>
-        <dd>
-          <p id="score"></p>
-        </dd>
-        <dd>
-          <p id="description"></p>
-        </dd>
-        <dd>
-          <p id="user"></p>
-        </dd>
-        <dd>
-          <p id="dateTime"></p>
-        </dd>
-      <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
+ 
+  <div class="row">
+    
+    <div class="list-group" id="cat-list-container">
+      
     </div>
-    <div>
-      <span class="fa fa-star checked" style="margin-left: 152px;"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-<span class="fa fa-star"></span>
+    
+</div>
+  </div>
+  
 
-      <p style="margin-left: 152px;"><b>Comentario:</b>    <input type="textarea" name="cuerpo" style="margin-left: 10px; width: 8cm; height:3cm;"> 
-        <input type="button" value="Enviar" name="Boton" style="margin-left: 10px;"></p> 
-    </div>
-
-  </main>
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
@@ -158,7 +68,6 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
-  <script src="js/login.js"></script>
 </body>
 
 </html>
