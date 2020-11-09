@@ -3,7 +3,8 @@
 //elementos HTML presentes.
  var cart = {};
 
- 
+ // Segun la cantidad de articulos, suma al subtotal
+ // al modificar los radios con la propiedad "change", suma el valor de envio al subtotal
  function addEvents(){
   for(let i=0; i<items.length; i++){
       document.getElementById(`articleCount${i}`).addEventListener("change", function(){
@@ -21,7 +22,7 @@
     subTotal();
   });
  
-
+// cargamos el json y le asignamos la ruta
  document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(CART_INFO2_URL).then(function(resultObj){
         if (resultObj.status === "ok")
@@ -39,7 +40,7 @@
     });
 
     
-
+// cargamos el json y le asignamos la ruta
     getJSONData(CART_BUY_URL).then(function(resultObj){
         if (resultObj.status === "ok"){
             asigns = resultObj.data;
@@ -52,7 +53,8 @@
 
     });
 });
-
+// funcion que carga los productos dentro del carrito a partir del json, recorriendo con un for
+// Agrega un html dinamico enlazado por id al cart.html
  function showCartProducts(items){
 
     let htmlContentToAppend = "";
@@ -109,6 +111,7 @@
 }
 document.getElementById("cartProducts").innerHTML = htmlContentToAppend;
  }
+ // funcion que recorre el json, almacena el costo unitario del producto, la cantidad y los multiplica para obter el subtotal en tiempo real
  function subTotal(){
      let subtotal = 0;
      let unitCost = 0;
@@ -130,7 +133,7 @@ document.getElementById("cartProducts").innerHTML = htmlContentToAppend;
     //}
 
      //document.getElementById(`subtotalGeneral`).innerHTML= total;
-     
+     // Simples condiciones para sumar al subtotal el tipo de envio seleecionado por radio
      
      if (document.getElementById("goldradio").checked){
         document.getElementById(`totalTotal`).innerHTML= (total + (subtotal / 100) * 7);
@@ -146,7 +149,7 @@ document.getElementById("cartProducts").innerHTML = htmlContentToAppend;
 }
 
 };
-
+// funcion que elimina los items del carrito, con un boton en html
 function eliminar(i){
     items.splice(i, 1);
     showCartProducts(items);

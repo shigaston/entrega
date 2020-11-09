@@ -1,5 +1,5 @@
 var category = {};
-
+// funcion que recorre el array para cargar las imagenes de la galeria con html dinamico
 function showImagesGallery(array){
 
     let htmlContentToAppend = "";
@@ -22,6 +22,8 @@ function showImagesGallery(array){
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
+
+// se carga el json de informacion de categorias y se le asignan los id conde apareceran los datos luego en html
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(CATEGORY_INFO_URL).then(function(resultObj){
         if (resultObj.status === "ok")

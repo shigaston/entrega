@@ -45,26 +45,26 @@ function showProductsList(){
         if (((minCount == undefined) || (minCount != undefined && parseInt(Products.cost) >= minCount)) &&
             ((maxCount == undefined) || (maxCount != undefined && parseInt(Products.cost) <= maxCount))){
 
-            htmlContentToAppend += `
-            <a href="Products-info.html" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="` + Products.imgSrc + `" alt="` + Products.description + `" class="img-thumbnail">
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">`+ Products.name +`</h4>
-                            <small class="text-muted">` + Products.soldCount + ` Vendidos</small>
+                htmlContentToAppend += `
+               
+                    
+                        <div class="col-3">
+                            <img href="products-info.html" src="` + Products.imgSrc + `" alt="` + Products.description + `" class="img-thumbnail">
                         </div>
-                        <p class="mb-1">` + Products.description + `</p>
-                        <p class="mb-1">USD ` + Products.cost + `</p>
-                    </div>
-                </div>
-            </a>
-            `
+                        <div class="col">
+                            <div class="d-flex w-100 justify-content-between">
+                                <a style ="font-size:25px" href="products-info.html" class="mb-1">`+ Products.name +`</a>
+                                <small class="text-muted">` + Products.soldCount + ` Vendidos</small>
+                            </div>
+                            <p class="card-text">` + Products.description + `</p>
+                            <p class="mb-1">USD ` + Products.cost + `</p>
+                        </div>
+                    
+                
+                `
         }
 
-        document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
+        document.getElementById("direct").innerHTML = htmlContentToAppend;
     }
 }
 
